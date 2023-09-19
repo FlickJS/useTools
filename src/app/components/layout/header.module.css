@@ -1,0 +1,40 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #333; 
+    color: #ffffff; 
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 40px; 
+    height: 40px; 
+    margin-right: 10px;
+  }
+  
+  .logo-text {
+    font-size: 1.5rem; 
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-item {
+    display: inline;
+    margin-left: 20px; 
+    font-size: 1.2rem; 
+    cursor: pointer;
+  }
+  
+  .menu-item:hover {
+    color: #a7a7a7; 
+  }
