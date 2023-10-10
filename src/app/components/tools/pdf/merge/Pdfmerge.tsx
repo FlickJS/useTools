@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PdfMerge from '../../../libs/Pdfmerges';
+import PdfMerge from '../../../libs/pdf/Pdfmerges';
 import usePdfMerge from './hooks/useMerge';
 
 function App() {
