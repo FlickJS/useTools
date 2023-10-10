@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
-import PdfMerge from '../libs/Pdfmerges';
+import { useState } from 'react';
 
+interface PdfMergeHook {
+  mergedPdf: Uint8Array | null;
+  handleMerge: (mergedPdfBytes: Uint8Array) => void;
+  handleDownloadPdf: () => void;
+}
 
-function App() {
+const usePdfMerge = (): PdfMergeHook => {
   const [mergedPdf, setMergedPdf] = useState<Uint8Array | null>(null);
 
   const handleMerge = (mergedPdfBytes: Uint8Array) => {
@@ -22,18 +26,11 @@ function App() {
     }
   };
 
+  return {
+    mergedPdf,
+    handleMerge,
+    handleDownloadPdf,
+  };
+};
 
-  return (
-    <>
-      <PdfMerge onMerge={handleMerge}/>
-      {mergedPdf && (
-        <div>
-          <h2>Pobierz połączony pdf:</h2>
-          <button onClick={handleDownloadPdf}>Pobierz</button>
-        </div>
-      )}
-    </>
-  )
-}
-
-export default App
+export default usePdfMerge;
