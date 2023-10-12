@@ -2,7 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 20px;
+    min-height: 10vh;
+    padding-left:40px;
+    padding-right: 40px;
     background-color: #333; 
     color: #ffffff; 
   }
@@ -10,6 +12,16 @@
   .navbar-left {
     display: flex;
     align-items: center;
+  }
+
+  .navbar-left > h1{
+    background-color: none;
+    color:white;
+    font-size: 40px;
+  }
+
+  .navbar-left > h1 > span {
+    color: rgb(4, 106, 202);
   }
   
   .logo {
@@ -38,3 +50,4 @@
   .menu-item:hover {
     color: #a7a7a7; 
   }
+

@@ -1,12 +1,11 @@
 import classes from './header.module.css';
-import Image from 'next/image';
-import logo from '../../../../public/useTools.png';
+
 
 const Header = () => {
     return (
         <nav className={classes.navbar}>
           <div className={classes['navbar-left']}>
-            <Image src={logo} width={250} height={200} alt="Company logo" />
+            <h1>use<span>Tools</span></h1>
           </div>
           <div className={classes['navbar-right']}>
             <ul className={classes.menu}>

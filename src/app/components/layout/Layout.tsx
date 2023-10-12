@@ -1,4 +1,6 @@
 import Header from "./Header";
+import Footer from "./Footer";
+import styles from './layout.module.css';
 
 
 type LayoutProps = {
@@ -10,7 +12,10 @@ const Layout = ({ children }: LayoutProps) => {
     return (
         <>
         <Header />
-            {children}
+            <div className={styles.content}>
+                {children}
+            </div>
+        <Footer />
         </>
     );
 }
